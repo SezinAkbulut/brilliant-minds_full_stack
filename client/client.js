@@ -1,3 +1,12 @@
+import express from "express";
+import path from "path";
+
+const app = express();
+
+app.get("/", (req, res) => {
+  res.sendfile(path.join(__dirname), "landing.html");
+});
+
 server.get("/show-all", async (req, res) => {
   // database connection
   // execute query
